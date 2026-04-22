@@ -101,4 +101,3 @@ Pipe
 Before we dive deeper into using some of the functions of dyplr, we first introduce the pipe operator %>%. The pipe operator allows us to chain together dplyr data wrangling functions.
 An advantage of using pipe is that it replaces having messy nested functions that can be difficult to interpret like:
 
-summarize(avg_carrier_delay = mean(CarrierDelay, na.rm = TRUE))
