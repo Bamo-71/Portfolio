@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bamory Sakanoko - Portfolio</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 40px;
+  background: #1e293b;
+}
+
+h2 { color: #38bdf8; }
+
+section {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* CARD */
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.card:hover { transform: scale(1.03); }
+
+/* ABOUT */
+.about {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.about img {
+  width: 120px;
+  border-radius: 10px;
+}
+
+/* SKILLS */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* CERTIFICATS */
+.certs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.certs img {
+  width: 100%;
+}
+
+/* BUTTON */
+button {
+  padding: 10px;
+  background: #38bdf8;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden { display: none; }
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Bamory Sakanoko</h1>
+  <p>Data Analyst | Statistique & Économie Appliquée</p>
+</header>
+
+<section>
+<h2>À propos</h2>
+
+<div class="card about">
+  <img src="photo.png"> <!-- TA PHOTO -->
+  <p>
+    Étudiant en fin de cycle Licence en Statistique et Économie appliquée.
+    Spécialisé en analyse de données, modélisation économétrique et prise de décision.
+  </p>
+</div>
+
+</section>
+
+<section>
+<h2>Compétences</h2>
+
+<div class="card skills">
+
+<div class="skill-box">
+<img src="R.png" width="50"><br>R
+</div>
+
+<div class="skill-box">
+<img src="Stata.png" width="50"><br>STATA
+</div>
+
+<div class="skill-box">
+<img src="Microsoft_Excel.png" width="50"><br>Excel
+</div>
+
+<div class="skill-box">
+<img src="MySQL.png" width="50"><br>MySQL
+</div>
+
+<div class="skill-box">
+<img src="Power_BI.png" width="50"><br>Power BI
+</div>
+
+<div class="skill-box">
+<img src="Pandas.png" width="50"><br>Pandas
+</div>
+
+<div class="skill-box">
+<img src="numpy.png" width="50"><br>Numpy
+</div>
+
+<div class="skill-box">
+<img src="Matplotlib.png" width="50"><br>Matplotlib
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Projets</h2>
+
+<div class="projects">
+
+<div class="card project">
+<img src="proj1.png">
+<h3>ANALYSE DES FACTEURS EXPLICATIFS DE VARIABLES QUALITATIVES À L’AIDE DE MODÈLES LOGIT ET ANOVA SOUS STATA </h3>
+<button onclick="toggle('p1')">Voir</button>
+<div id="p1" class="hidden">
+<p>Dans le cadre de ma formation en économétrie, j’ai réalisé une étude empirique sur l’econométrie des variables qualitatives portant sur l’analyse des déterminants de la probabilité de travailler à temps plein, à partir d’un jeu de données réelles.
+L’objectif était d’examiner l’influence de variables individuelles telles que l’âge, le niveau d’éducation et le statut matrimonial sur la participation au marché du travail.
+Pour ce faire, j’ai d’abord effectué une analyse descriptive des données afin de comprendre la structure et les caractéristiques des variables. J’ai ensuite estimé un modèle de probabilité linéaire (MPL) à l’aide de la méthode des moindres carrés ordinaires, ce qui m’a permis d’interpréter directement les effets marginaux des variables explicatives.
+Ensuite j’ai effectué le test de White pour vérifier l’homoscédasticité   de mon modèle et le t-test pour vérifier la normalité de mes variables explicatives 
+Afin de pallier les limites du LPM, notamment les problèmes de prédictions hors de l’intervalle [0,1], j’ai également estimé un modèle logit avec le logiciel STATA. Cette approche m’a permis d’analyser les probabilités de manière plus rigoureuse et d’interpréter les résultats en termes d’odds ratio.
+Enfin, j’ai calculé et interprété les effets marginaux afin de mesurer l’impact des variables explicatives sur la probabilité de travailler à temps plein, en contrôlant les autres facteurs.
+</p>
+<a href="#">Voir code</a>
+</div>
+</div>
+
+<div class="card project">
+<img src="proj2.png">
+<h3>PROJET D’ENQUÊTE TERRAIN :  COLLECTE ET ORGANISATION DE DONNEES DES MENAGES</h3>
+<button onclick="toggle('p2')">Voir</button>
+<div id="p2" class="hidden">
+<p>•	Dans le cadre d’une compétition académique, Génie UPB qui s’est déroulant du 06 Février au 09 Février 2026, j’ai participé à la réalisation d’une enquête de terrain portant sur la collecte de données auprès de ménages.
+J’ai conçu un questionnaire à l’aide de Kobotoolbox adapté aux objectifs de l’étude qui était d’évaluer l’impact de l’inflation sur le pouvoir d’achat des ménages à Abidjan j’ai mené la collecte de données avec une équipe de 4 personnes dont j’étais le chef auprès de 72 chefs de ménage dans les zones d’Angré et de Bingerville. J’ai également assuré la structuration et l’organisation des données collectées en vue de leur exploitation.
+•	Dans le cadre du Recensement National des methodiste de Côte d’Ivoire allant du 01 Janvier à Juin 2026, j’occupe le rôle d’agent recenseur au sein de mon église locale, chargé de collecter et d’enregistrer des informations sur les membres.
+À l’aide d’un questionnaire préétabli, j’ai procédé à l’inscription de plusieurs personnes dans le registre méthodiste, en veillant à la fiabilité et à la complétude des données recueillies. J’ai ensuite participé à l’organisation et à la structuration des informations collectées.
+Ces 2 expérience m’ont permis de travailler avec des données réelles de développer des compétences en collecte de données, en gestion d’informations et gestion de base de donné en respectant des consignes méthodologiques dans un contexte réel de terrain.
+</p>
+</div>
+</div>
+
+<div class="card project">
+<img src="proj3.png">
+<h3>R PROGRAMATION</h3>
+<button onclick="toggle('p3')">Voir</button>
+<div id="p3" class="hidden">
+<p>J’ai eu a travailler avec un jeu de donné reél durant ma certification en data analyst avec R le travail consistait a mener une etude complète d’analyse de donner allant du taitement des données jusqu’à la craetion et l’evaluation des modèles.
+Dans cette etude, j’ai travaillé sur la base de donné Airline une base qui contient les données dune compagnie aérienne concernant les différents vols de la compagnie.
+1-IMPORTATION DE LA BASE ET VISULISTION DE LA BASE
+Pour mener notre etude à bien, j’ai directement télécharger la base depuis internet puis j’ai vu les caracteristique et les details  de la bases à savoir le nombre d’observation le nombre de variables le noms des colonnes…etc.
+Pour le data wranling nous avons utiliser le package dypyr de R  qui permet de selectionner filtrer et modifier la base de donnée pour une meilleure analyse des données, ce qui nous a permis de faire sortir des données comme la moyenne d’heure de retard pour chaue compagnie.
+2-TRAITEMENT DES DONNEES
+-Formatage des données
+-Normalisation
+-Bining :Creation des classes discrètes à partir des valeurs continues
+-Transformer les variables catégorielles en variables numériques
+
+3-ANALYSE EXPLORATOIRE 
+C’est l’étape  à laquelle je dois explorer profondement comprendre chaque variable  et la relation qui la lie aux autres(analyse bivarié et univarié) et visualisation variable avant de faire des modèles ou des tests statistiques.
+-Statistiue descriptive
+-Graphiue
+-ANOVA
+-Corrélation
+
+4-DEVELOPPEMENT DES MODÈLES ET VERIFICATION
+-Regression Lineaire simple et multiple
+-Regression polynomiale
+-Verification graphiue
+</p>
+</div>
+</div>
+
+<div class="card project">
+<img src="proj4.png">
+<h3>Projet SQL</h3>
+<button onclick="toggle('p4')">Voir</button>
+<div id="p4" class="hidden">
+<p>Base de données</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Certificats</h2>
+
+<div class="certs">
+
+<div class="card">
+<img src="cert1.png">
+<p>Certificat Data</p>
+</div>
+
+<div class="card">
+<img src="cert2.png">
+<p>Certificat SQL</p>
+</div>
+
+<div class="card">
+<img src="cert3.png">
+<p>Certificat BI</p>
+</div>
+
+<div class="card">
+<img src="cert4.png">
+<p>Certificat Python</p>
+</div>
+
+<div class="card">
+<img src="cert5.png">
+<p>Certificat Analyse</p>
+</div>
+
+<div class="card">
+<img src="cert6.png">
+<p>Certificat Stat</p>
+</div>
+
+</div>
+</section>
+
+<script>
+function toggle(id) {
+  document.getElementById(id).classList.toggle("hidden");
+}
+</script>
+
+</body>
+</html>
